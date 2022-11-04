@@ -22,13 +22,13 @@ public class PruebaApplication {
         repository.save(libro2);
         repository.save(libro3);
 
-        System.out.println(repository.count());
-        System.out.println(repository.findAll());
-
-        System.out.println(repository.existsById(2L));
-        repository.deleteById(2L);
-
-        System.out.println(repository.count());
-        System.out.println(repository.findAll());
+//        System.out.println(repository.count());
+//        System.out.println(repository.findAll());
+//
+//        System.out.println(repository.existsById(2L));
+//        repository.deleteById(2L);
+//
+//        System.out.println(repository.count());
+//        System.out.println(repository.findAll());
     }
 }
