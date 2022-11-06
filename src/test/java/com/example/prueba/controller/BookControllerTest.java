@@ -2,6 +2,7 @@ package com.example.prueba.controller;
 
 import com.example.prueba.entitis.Book;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -32,6 +33,7 @@ class BookControllerTest {
         testRestTemplate = new TestRestTemplate((restTemplateBuilder));
     }
 
+    @DisplayName("Crear un libro")
     @Test
     void create() {
 
@@ -56,6 +58,7 @@ class BookControllerTest {
         assertEquals(1L, result.getId()); // Deberia crear el primer libro de la base de datos con un ID = 1
     }
 
+    @DisplayName("Obtener todos los libros")
     @Test
     void findAll() {
 
@@ -69,6 +72,7 @@ class BookControllerTest {
         assertEquals(1, result.length); // debe tener el libro creado en el test del metodo create
     }
 
+    @DisplayName("Obtener un libro por medio de su ID")
     @Test
     void findById() {
 
