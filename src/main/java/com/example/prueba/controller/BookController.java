@@ -2,6 +2,8 @@ package com.example.prueba.controller;
 
 import com.example.prueba.entitis.Book;
 import com.example.prueba.repository.BookRepository;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -30,7 +32,8 @@ public class BookController {
     }
 
     @GetMapping("/api/books/{id}")
-    public ResponseEntity<Book> findById(@PathVariable Long id) {
+    @ApiOperation("Buscar un libro por la clave primaria id Long")
+    public ResponseEntity<Book> findById(@ApiParam("Clave primaria tipo Long") @PathVariable Long id) {
 
         Optional<Book> bookOpt = repository.findById(id);
 
